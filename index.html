@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#176B74">
+  <meta name="description" content="Convert YouTube Videos to Audio instantly.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>YouTube to Audio | OmniTools</title>
+
+  <!-- Use local CSS -->
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+
+<body>
+  <main id="app-main">
+    <!-- Top Navigation Bar -->
+    <header class="app-topbar">
+      <a href="./" class="brand-logo" title="Reload">
+        <img src="./logo.webp" alt="YT Audio Logo" class="brand-logo-img">
+      </a>
+      <h3 style="color: white; margin-right: auto; margin-left: 10px; font-size: 1rem;">YT to Audio</h3>
+    </header>
+
+    <!-- Studio View Format -->
+    <div id="studio-view" class="studio-view animate-fade-in" style="display: flex;">
+      
+      <!-- Tool Header -->
+      <div class="tool-header">
+        <div class="tool-header-content">
+          <div class="tool-header-icon">🎵</div>
+          <div class="tool-header-text">
+            <h2>YouTube to Audio</h2>
+            <p>Paste a YouTube link to instantly download the highest quality audio. Support for videos up to 2 hours long.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="glass-panel-subtle compact-options-bar">
+        <div class="compact-options-row">
+          <div class="compact-option-item" style="flex: 1; align-items: stretch;">
+            <span class="compact-opt-label">YouTube URL</span>
+            <input type="url" id="yt-url" class="compact-text-input" placeholder="https://www.youtube.com/watch?v=..." style="width: 100%; cursor: text; user-select: text !important; -webkit-user-select: text !important;" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status/Queue Area (Hidden by default) -->
+      <div id="status-card" class="batch-card hidden">
+        <div class="batch-card-header">
+          <div class="batch-card-meta">
+            <span class="file-icon-badge">🎵</span>
+            <div class="file-name-stack">
+              <span class="file-name" id="status-text">Processing Audio...</span>
+            </div>
+          </div>
+          <!-- Loader -->
+          <div id="status-loader" class="logo-spinner"></div>
+        </div>
+      </div>
+
+      <!-- Main Action Button -->
+      <div id="studio-action-area">
+        <button id="btn-convert" class="primary-btn animate-fade-in" style="width: 100%; height: 58px; font-size: 1.15rem;">
+          <span class="btn-icon">⚡</span>
+          Fetch Audio
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

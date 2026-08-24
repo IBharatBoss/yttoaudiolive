@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('status-loader');
 
   // TODO: Update this URL once the backend is deployed to Render.com
-  const BACKEND_URL = 'https://yttoaudio.onrender.com'; 
+  const BACKEND_URL = 'https://sweet-wolves-kneel.loca.lt'; 
 
   btnConvert.addEventListener('click', async () => {
     const videoUrl = urlInput.value.trim();
